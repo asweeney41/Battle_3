@@ -11,9 +11,6 @@ class Player
     @hit_points = hit_points
   end
 
-  def attack(player)
-    Game.new.attack(player)
-  end
 
   def receive_damage
     @hit_points -= 20

@@ -1,14 +1,14 @@
 <!-- # <% if @player1 && @player2 %> -->
-<h1><%= @player1 %> vs. <%= @player2 %></h1>
+<h1><%= "#{@player1.name} #{@player1.hit_points}" %> vs. <%= "#{@player2.name} #{@player2.hit_points}" %></h1>
 <!-- # <% end %> -->
 
 <div id="player2_HP" style="border: 3px black solid; width: 120px;">
   <p style="text-align: center;">
-    <%= @player2 %>
-    <%= @player2_hp %> HP
+    <%= @player2.name %>
+    <%= @player2.hit_points %> HP
   </p>
 </div>
 
 <form action="/attack">
-  <input type="submit" value="Attack <%= @player2 %>">
+  <input type="submit" value="Attack">
 </form>
